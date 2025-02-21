@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import c01web2 from "../../../public/assets/img/c01web-2.jpg";
+import MenuSec from "./MenuSec";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,7 +95,13 @@ const HeroSection = () => {
           </span>
         </div>
       </div>
+      <div className="absolute w-full bottom-[75px] z-10">
+          <div className="container">
+            <MenuSec/>
+          </div>
+        </div>
       <div className="prject-sec h-full flex flex-wrap" style={{ width: `${projects.length * 100}vw` }} ref={sectionRef}>
+       
         {projects.map((project, index) => (
           <div key={project.id} className="slide h-full w-screen relative overflow-hidden text-white">
             <figure className="h-full w-full absolute -z-50">
