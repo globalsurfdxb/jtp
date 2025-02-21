@@ -28,7 +28,7 @@ const tailwindConfig = {
           lg: "960px",
           xl: "1140px",
           xxl: "1300px",
-          xxxl : "1590px",
+          xxxl : "1650px",
         },
       },
       colors: {
@@ -39,7 +39,7 @@ const tailwindConfig = {
         xxxl: 'clamp(5rem, 10vw, 8.75rem)', // 80px - 140px (for large hero headings)
         xxl: 'clamp(3.5rem, 6vw, 4.375rem)', // 56px - 70px (for section titles)
         xl: 'clamp(1.75rem, 3vw, 2.063rem)', // 28px - 33px (for subheadings)
-        lg: 'clamp(1.125rem, 2vw, 1.188rem)', // 18px - 19px (for body text)
+        lg: 'clamp(1rem, 2vw, 1.125rem)', // 16px - 18px (for body text)
       },
       borderRadius: {
         custom: "16px",

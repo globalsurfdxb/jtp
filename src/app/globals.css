@@ -25,8 +25,9 @@ html {
   scroll-behavior: initial
 }
 body {
-  @apply text-black;
-  @apply font-custom;
+
+  @apply font-custom text-lg text-black;
+  
 }
 .section-padding {
   @apply py-[80px] xl:py-[150px] xxl:py-[180px]; 

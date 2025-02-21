@@ -15,36 +15,9 @@ const projects = [
     client: "MR Properties",
     type: "5 Star Hilton Hotel & Branded Residences",
     description:
-      "Perched on the captivating Al Marjan Island, the Hilton 5-star hotel masterfully balances serene beachfront luxury with the thrilling allure of a vibrant casino.",
+      "Perched on the captivating Al Marjan Island, the Hilton 5-star hotel masterfully balances serene beach front luxury with the thrilling allure of a vibrant casino. Nestled beside the existing Hampton by Hilton Al Marjan Island, this architectural marvel offers guests and residents an unparalleled experience that fuses relaxation and entertainment.",
     image: c01web2,
-  },
-  {
-    id: 2,
-    title: "Hilton Marjan Island Beach Resort & Spa",
-    client: "MR Properties",
-    type: "5 Star Hilton Hotel & Branded Residences",
-    description:
-      "Perched on the captivating Al Marjan Island, the Hilton 5-star hotel masterfully balances serene beachfront luxury with the thrilling allure of a vibrant casino.",
-    image: c01web2,
-  },
-  {
-    id: 3,
-    title: "Hilton Marjan Island Beach Resort & Spa",
-    client: "MR Properties",
-    type: "5 Star Hilton Hotel & Branded Residences",
-    description:
-      "Perched on the captivating Al Marjan Island, the Hilton 5-star hotel masterfully balances serene beachfront luxury with the thrilling allure of a vibrant casino.",
-    image: c01web2,
-  },
-  {
-    id: 4,
-    title: "Hilton Marjan Island Beach Resort & Spa",
-    client: "MR Properties",
-    type: "5 Star Hilton Hotel & Branded Residences",
-    description:
-      "Perched on the captivating Al Marjan Island, the Hilton 5-star hotel masterfully balances serene beachfront luxury with the thrilling allure of a vibrant casino.",
-    image: c01web2,
-  },
+  }
 ];
 
 const HeroSection = () => {
@@ -76,7 +49,7 @@ const HeroSection = () => {
     );
     return () => animation.kill();
   }, [totalSlides]);
-  useEffect(() => {
+ /*  useEffect(() => {
     gsap.utils.toArray(".content-box").forEach((box) => {
       gsap.fromTo(
         box,
@@ -93,13 +66,13 @@ const HeroSection = () => {
         }
       );
     });
-  }, []);
+  }, []); */
   
   return (
     <section className="h-screen relative" ref={triggerRef}>
       <div className="absolute left-0 top-0 h-screen w-16 bg-white flex flex-col items-center justify-between py-10 border-r z-10">
         <div className="h-[200px] flex items-center">
-          <span className="text-xs tracking-widest font-light rotate-[-90deg] whitespace-nowrap font-custom">
+          <span className="text-[15px] text-[#717171] tracking-widest font-light rotate-[-90deg] whitespace-nowrap font-custom">
             FEATURED PROJECTS
           </span>
         </div>
@@ -107,8 +80,8 @@ const HeroSection = () => {
           <div className="w-[1px] h-12 bg-gray-300 relative">
             <div className="w-[2px] h-6 bg-red-500 absolute bottom-0"></div>
           </div>
-          <span className="text-xs font-bold rotate-[-90deg] whitespace-nowrap">
-            {`${currentSlide} - ${totalSlides}`}
+          <span className="text-[15px] font-bold rotate-[-90deg] whitespace-nowrap">
+            {`0${currentSlide} - 0${totalSlides}`}
           </span>
         </div>
       </div>
@@ -116,37 +89,41 @@ const HeroSection = () => {
         {projects.map((project, index) => (
           <div key={project.id} className="slide h-full w-screen relative overflow-hidden text-white">
             <figure className="h-full w-full absolute -z-50">
-              <Image className="h-full w-full absolute object-cover object-center" src={project.image} alt={project.title} width={1800} height={1000} />
+              <Image className="h-full w-full absolute object-cover object-center" src={project.image} alt={project.title} width={2500} height={1000} />
             </figure>
-            <div className="h-full w-full -z-40 absolute bg-gradient-to-b from-black to-transparent opacity-80"></div>
-            <div className="absolute w-full h-full pt-10">
-              <div className="container">
-                <div className="h-screen relative">
+            <div className="h-full w-full -z-40 absolute bg-gradient-to-b from-black to-transparent opacity-60"></div>
+            <div className="absolute w-full h-full">
+              <div className="container h-full">
+                <div className="h-full relative">
                   <motion.div 
-                    className="title"
+                    className="title pt-[90px] w-[70%]"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                   >
-                    <h1 className="text-xxl text-white leading-none font-custom font-light">
+                    <h1 className="text-xxl text-white leading-tight font-custom font-light">
                       {project.title}
                     </h1>
+                    <div className="flex gap-[10px] mt-[30px]">
+                        <p className="bg-white/30 text-[14px] p-2 rounded-full leading-none px-4 backdrop-blur-[5px]">Completed</p>
+                        <p className="bg-white/30 text-[14px] p-2 rounded-full leading-none px-3 backdrop-blur-[5px]">MR Properties</p>
+                    </div>
                   </motion.div>
-                  <div className="content-box absolute w-[40%] right-0">
+                  <div className="content-box absolute w-[550px] right-0 top-[50%] translate-y-[-50%]">
                     <h2 className="text-xl">{project.title}</h2>
-                    <div className="flex">
+                    <div className="grid grid-cols-2 items-start mt-[80px] mb-[60px]">
                       <div>
-                        <p>CLIENT</p>
-                        <h6>{project.client}</h6>
+                        <p className="text-[15px] opacity-70 mb-[15px] leading-none">CLIENT</p>
+                        <h6 className="text-18px">{project.client}</h6>
                       </div>
                       <div>
-                        <p>TYPE</p>
-                        <h6>{project.type}</h6>
+                        <p className="text-[15px] opacity-70 mb-[15px] leading-none">TYPE</p>
+                        <h6 className="text-18px">{project.type}</h6>
                       </div>
                     </div>
-                    <hr />
-                    <p>{project.description}</p>
+                    <hr className="mb-[80px]"/>
+                    <p className="opacity-70">{project.description}</p>
                   </div>
                 </div>
               </div>
