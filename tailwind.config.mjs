@@ -14,7 +14,7 @@ const tailwindConfig = {
         lg: "992px",
         xl: "1200px",
         xxl: "1450px",
-        "3xl": "1650px",
+        xxxl: "1650px",
       },
       container: {
         center: true,
@@ -28,7 +28,7 @@ const tailwindConfig = {
           lg: "960px",
           xl: "1140px",
           xxl: "1300px",
-          "3xl": "1590px",
+          xxxl : "1590px",
         },
       },
       colors: {
