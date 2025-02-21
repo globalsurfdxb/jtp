@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@font-face {
+  font-family: "IndianType";
+  src: url("../../public/assets/fonts/Indian\ Type\ Foundry\ -\ HongKong\ Light.woff2") format("woff2"),
+    url("../../public/assets/fonts/Indian\ Type\ Foundry\ -\ HongKong\ Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IndianType";
+  src: url("../../public/assets/fonts/Indian\ Type\ Foundry\ -\ HongKong\ Medium.woff2") format("woff2"),
+    url("../../public/assets/fonts/Indian\ Type\ Foundry\ -\ HongKong\ Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+  font-family: 'IndianType';
+  font-weight: 300;
+}
+html {
+  scroll-behavior: initial
+}
+body {
+  @apply text-black;
+  @apply font-custom;
+}
+.section-padding {
+  @apply py-[80px] xl:py-[150px] xxl:py-[180px]; 
+}
