@@ -6,12 +6,14 @@ const OurExpertise = () => {
   return (
     <section className="section-padding bg-black text-white">
     <div className="container">
-      <h2 className="text-xxxl text-center ">Our Expertise</h2>
-      <div className="old-itms">
-        <div className="flex gap-4 ">
+      <h2 className="text-xxxl text-center leading-none mb-[90px]">Our Expertise</h2>
+      <div className="old-itms mb-4">
+        <hr className='bg-gradient-to-r from-white/40 to-transparent h-[1px] border-none'></hr>
+        <div className="flex gap-4 my-3">
           <p>01</p>
           <p>Engineering</p>
         </div>
+        <hr className='bg-white'></hr>
       </div>
       <div className="grid grid-cols-2">
         <div className="h-full ">

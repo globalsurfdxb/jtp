@@ -80,8 +80,8 @@ const HeroSection = () => {
           <div className="w-[1px] h-12 bg-gray-300 relative">
             <div className="w-[2px] h-6 bg-red-500 absolute bottom-0"></div>
           </div>
-          <span className="text-[15px] font-bold rotate-[-90deg] whitespace-nowrap">
-            {`0${currentSlide} - 0${totalSlides}`}
+          <span className="text-[15px] rotate-[-90deg] whitespace-nowrap font-light">
+           <span className="font-medium "> {`0${currentSlide}`}</span> - {`0${totalSlides}`}
           </span>
         </div>
       </div>

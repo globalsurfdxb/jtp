@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Image from 'next/image';
 
 const textVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -32,9 +33,9 @@ const AboutSection = () => {
               JT Partners JT P is an international multidisciplinary consultant which offers a unique portfolio of architecture, planning, engineering, project management, infrastructure and cost consultancy services.
             </p>
             <button 
-              className="mt-6 flex items-center text-red-500"
+              className="mt-6 flex items-center text-[19px] font-light"
             >
-              <span className="text-2xl mr-2">+</span> Know More Us
+              <span className="text-2xl mr-3"><Image src={'/assets/img/plusicon.svg'} alt='' width={40} height={40}/></span> Know More Us
             </button>
           </motion.div>
         </div>
