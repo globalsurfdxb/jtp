@@ -6,32 +6,32 @@ const News = () => {
     <section
       className="section-padding bg-gradient-to-b from-[#F5F5F5] to-transparent"
     >
-      <div className="container">
-        <div>
-          <h2 className="text-xxxl text-left leading-none">News</h2>
-          <div className="nws-items">
-            <div className="items p-10  flex justify-between">
-              <h3 className="text-xl w-[60%]">
+      <div className="container text-right flex justify-end">
+        <div className='w-[90%]'>
+          <h2 className="text-xxxl text-left leading-none pl-[35px] mb-[50px]">News</h2>
+          <div className="nws-items border-b border-black/20 border-t">
+            <div className="items p-[50px]  flex justify-between items-start">
+              <h3 className="text-xl w-[60%] text-start">
                 NEOM announces Elanan, a unique wellness retreat embedded in
                 nature
               </h3>
-              <p className="w-[20%]">15-05-2025</p>
-              <Image src={plusico} alt="" width={50} height={50} />
+              <p className="w-[20%] text-[#878787]">15-05-2025</p>
+              <Image src={plusico} alt="" width={30} height={30} />
             </div>
-            <div className="items p-10 bg-black text-white flex justify-between">
-              <h3 className="text-xl w-[60%]">
+            <div className="items p-[50px] bg-black text-white flex justify-between">
+            <h3 className="text-xl w-[60%] text-start">
                 Future Hospitality Summit 2025 – Dubai
               </h3>
-              <p className="w-[20%]">15-05-2025</p>
+              <p className="w-[20%] text-[#878787]">15-05-2025</p>
               <Image src={plusico} alt="" width={50} height={50} />
             </div>
-            <div className="items p-10 flex justify-between">
-              <h3 className="text-xl w-[60%]">
+            <div className="items p-[50px] flex justify-between items-start">
+            <h3 className="text-xl w-[60%] text-start">
                 NEOM announces Elanan, a unique wellness retreat embedded in
                 nature
               </h3>
-              <p className="w-[20%]">15-05-2025</p>
-              <Image src={plusico} alt="" width={50} height={50} />
+              <p className="w-[20%] text-[#878787]">15-05-2025</p>
+              <Image src={plusico} alt="" width={30} height={30} />
             </div>
           </div>
         </div>

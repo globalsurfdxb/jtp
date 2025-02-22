@@ -1,4 +1,8 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState } from 'react'
+import { assets } from '../../../public/assets/assets';
+import MarqueeText from "./sections/MarqueeText"
 
 const Footer = () => {
 
@@ -28,21 +32,28 @@ const Footer = () => {
       const currentLocation = locations.find((loc) => loc.name === selected);
 
   return (
-    <footer className="section-padding bg-black text-white">
+    <footer className="pt-[100px] pb-0 bg-black text-white">
     <div className="container">
-      <h2 className="text-xxxl">Let’s collaborate!</h2>
-      <div className="flex">
-        <div className="text-xxl ">
-          +971 4 452 1135 clients@jtpartners.com
+      <h2 className="text-xxxl mb-[100px]">Let’s collaborate!</h2>
+      <div className="flex items-end mb-[120px]">
+        <div className="text-xxl font-light">
+        <Link className='leading-none' href={'tel:+971 4 452 1135'}>  +971 4 452 1135 </Link>
+        <Link className='leading-none' href={'mailto:clients@jtpartners.com'}>clients<span className='text-[#F9423A]'>@</span>jtpartners.com</Link>
         </div>
-        <div>+971 4 452 1135 clients@jtpartners.com</div>
+        <div>
+          <ul className="flex gap-10">
+            <li className='font-light text-[15px] uppercase'><Link href={'#'} className='flex gap-[10px] text-[#9D9D9C] transition-all duration-300 hover:text-white hover:scale-125'><span>Instagram</span> <Image src={assets.arrwtp} alt='' height={12} width={12}/></Link></li>
+            <li className='font-light text-[15px] uppercase'><Link href={'#'} className='flex gap-[10px] text-[#9D9D9C] transition-all duration-300 hover:text-white hover:scale-125'><span>LinkedIn</span> <Image src={assets.arrwtp} alt='' height={12} width={12}/></Link></li>
+            <li className='font-light text-[15px] uppercase'><Link href={'#'} className='flex gap-[10px] text-[#9D9D9C] transition-all duration-300 hover:text-white hover:scale-125'><span>Facebook</span> <Image src={assets.arrwtp} alt='' height={12} width={12}/></Link></li>
+          </ul>
+        </div>
       </div>
       <hr />
-      <div className="flex space-x-4 mb-6 justify-center mt-10">
+      <div className="flex space-x-4 mb-[50px] justify-center mt-[140px]">
         {locations.map((location) => (
           <button
             key={location.name}
-            className={`px-6 py-2 rounded-full border ${
+            className={`px-[90px] py-[15px] rounded-full border text-xl font-light ${
               selected === location.name
                 ? "border-white text-white"
                 : "border-gray-500 text-gray-500"
@@ -57,21 +68,25 @@ const Footer = () => {
       {/* Location Details */}
       {currentLocation && (
         <div className="text-center">
-          <h2 className="text-lg font-semibold">
+          <h2 className="text-xl font-light uppercase mb-[25px]">
             {currentLocation.name}, UAE
           </h2>
-          <p className="text-gray-400">{currentLocation.address}</p>
-          <p className="text-gray-400">{currentLocation.office}</p>
-          <p className="text-gray-400">
-            <span className="text-red-500 font-bold">T</span>{" "}
+          <p className="text-[#9D9D9C] text-19px">{currentLocation.address}</p>
+          <p className="text-[#9D9D9C] text-19px">{currentLocation.office}</p>
+          <p className="text-[#9D9D9C] text-19px">
+            <span className="text-red-500 font-medium">T</span>{" "}
             {currentLocation.phone.split(",")[0]},{" "}
-            <span className="text-red-500 font-bold">F</span>{" "}
+            <span className="text-red-500 font-medium">F</span>{" "}
             {currentLocation.phone.split(",")[1]}
           </p>
         </div>
       )}
-       
+       <div className='mt-[60px]'>
+        <Image className='mx-auto invert brightness-0 hover:invert-0 hover:brightness-100 hover:scale-125 duration-300 transition-all cursor-pointer' src={assets.plusico} width={75} height={75}/>
+       </div>
+      
     </div>
+    <MarqueeText/>
   </footer>
   )
 }

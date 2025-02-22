@@ -60,19 +60,23 @@ const OurTeam = () => {
   return (
     <section className="section-padding">
     <div className="container">
-      <h2 className="text-xxxl text-left leading-none">Meet Our Team</h2>
-      <div className="flex flex-nowrap justify-center gap-10 w-[400%]">
+      <h2 className="text-xxxl text-left leading-none mb-[100px]">Meet Our Team</h2>
+      <div className="flex flex-nowrap justify-center w-[300%]">
         {teamMembers.map((member, index) => (
           <div key={index} className="text-center w-[20%]">
+            <figure className='h-[450px] border-b border-black/20 mb-[50px]'>
             <Image
               src={member.image}
               alt={member.name}
               width={500}
               height={800}
-              className="w-64 h-auto object-cover mx-auto"
+              className="h-full object-contain object-left"
             />
-            <h3 className="mt-5 text-2xl font-medium">{member.name}</h3>
-            <p className="text-gray-500">{member.role}</p>
+            </figure>
+            <div className='text-start'>
+            <h3 className="mb-[15px] text-xl">{member.name}</h3>
+            <p className="text-[#878787]">{member.role}</p>
+            </div>
           </div>
         ))}
       </div>
